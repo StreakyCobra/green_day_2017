@@ -50,7 +50,22 @@
                  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                  { src: 'plugin/zoom-js/zoom.js', async: true },
                  { src: 'plugin/notes/notes.js', async: true },
+                 { src: 'node_modules/reveal.js-menu/menu.js' }
              ],
+
+             menu: {
+                 side: 'left',
+                 numbers: true,
+                 hideMissingTitles: true,
+                 markers: true,
+                 openButton: true,
+                 openSlideNumber: false,
+                 keyboard: true,
+                 titleSelector: 'h1, h2, h3, h4, h5, h6',
+                 custom: null,
+                 transitions: null,
+                 themes: null,
+             },
          });
 
         </script>
