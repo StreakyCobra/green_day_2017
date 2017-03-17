@@ -20,11 +20,141 @@
          link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
          document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
+
+        <style>
+         .address {
+             position: absolute;
+             bottom: 10px;
+             width: 100%;
+             text-align: center;
+             color: #777777;
+             font-size: 1.5em;
+         }
+
+         .red {
+             color: #FF2C2D !important;
+         }
+
+         .blue {
+             color: #1B91FF !important;
+         }
+
+         .green {
+             color: #17FF2E !important;
+         }
+
+         .darkbg {
+             background-color:rgba(0, 0, 0, 0.5) !important;
+         }
+
+         .whitebg {
+             background-color:rgba(255, 255, 255, 1) !important;
+         }
+
+         .simple-image {
+             border: none !important;
+             background: none !important;
+             box-shadow: none !important;
+         }
+
+         .clearfix:after {
+             visibility: hidden;
+             display: block;
+             font-size: 0;
+             content: " ";
+             clear: both;
+             height: 0;
+         }
+         .clearfix { display: inline-block; }
+         /* start commented backslash hack \*/
+         * html .clearfix { height: 1%; }
+         .clearfix { display: block; }
+         /* close commented backslash hack */
+        </style>
+        
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
-                <section><h1>Welcome</h1></section>
+                <section data-background="#42affa">
+                    <h2>Interpretability and Explainability of Machine Learning</h1>
+                </section>
+                
+                <section>
+                    <h3>Why?</h3>
+                    <ul>
+                        <li>Impact of decisions <i class="blue fa fa-arrow-right" style="font-size: 0.7em"></i> medical</li>
+                        <li>Regulations <i class="blue fa fa-arrow-right" style="font-size: 0.7em"></i> UE 2018, USA Report 2016</li>
+                        &nbsp;
+                        <center><b>Why <span class="red">you</span> should care?<sup class="red">*</sup></b></center>
+                        &nbsp;
+                        <li>Understanding mistakes <i class="blue fa fa-arrow-right" style="font-size: 0.7em"></i> better models</li>
+                        <li>Usefulness <i class="blue fa fa-arrow-right" style="font-size: 0.7em"></i> adoption, extending knowl. </li>
+                    </ul>
+                    <br />
+                    <div style="font-size: 0.7em; margin-top: 2em;">
+                        <sup class="red">*</sup> and not just beat the state of the art performance
+                    </div>
+                </section>
+                
+                <section>
+                    <h3>Definitions</h3>
+                    &nbsp;
+                    &nbsp;
+                    <ul>
+                        <li>
+                            Explainability:
+                            <br/>
+                            <i>What is the <span class="red">rationale</span> behind the <span class="red">decision</span> made?</i>
+                            <br />
+                            &nbsp;
+                        </li>
+                        <li>
+                            Interpretability:
+                            <br/>
+                            <i>What in the <span class="red">model structure</span> explains its <span class="red">functioning</span>?</i>
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <div class="clearfix">
+                        <div style="float: left; width: 50%;">
+                            <p>Explainability</p>
+                            <img src="./images/guitar.png" />
+                        </div>
+                        <div style="float: right; width: 50%;">
+                            <p>Interpretability</p>
+                            <img src="./images/features.png"/>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h3>Solutions</h3>
+                    Generally there are two approaches:<br />
+                    <span class="red">interpretable</span> models and <span class="red">surrogate</span> models.
+                    <br />
+                    <div style="height: 1em;"></div>
+                    <ul>
+                        <li>Fuzzy rules <i class="blue fa fa-arrow-right" style="font-size: 0.7em"></i> before DL</li>
+                        <li>Visualization <i class="blue fa fa-arrow-right" style="font-size: 0.7em"></i> image classification</li>
+                        <li>LIME - Local Interpretable Model-Agnostic</li>
+                        <li>…</li>
+                    </ul>
+                    <br />
+                    &nbsp;
+                    <div class="fragment drop-down">
+                        <i class="red fa fa-chevron-down"></i>
+                        <p>Research direction for my thesis</p>
+                    </div>
+                </section>
+                
+                <section data-background="#42affa">
+                    <p>Thanks you for your attention!</p>
+                    <p>Questions?</p>
+                    <p style="font-size: 4em;"><i class="fa fa-question-circle"></i></p>
+                </section>
             </div>
         </div>
 
